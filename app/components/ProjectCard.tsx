@@ -7,14 +7,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
       className='block transform transition duration-300 hover:scale-[1.02] '
       to={`/projects/${project.id}`}
     >
-      <div className='bg-gray-800 border border-gray-700 rounded-lg overflow-hidden shadow-sm transition hover:shadow-md min-h-85'>
+      <div
+        style={{ backgroundColor: '#57564F' }}
+        className=' border border-gray-700 rounded-lg overflow-hidden shadow-sm transition hover:shadow-md min-h-85'
+      >
         <img
           src={project.image}
           alt={project.title}
           className='w-full h-40 object-cover'
         />
         <div className='p-5 flex flex-col justify-between h-40'>
-          <h3 className='text-3xl font-semibold text-blue-400 mb-1'>
+          <h3 className='text-3xl font-semibold text-white mb-1'>
             {project.title}
           </h3>
           <p className='text-sm text-gray-300 mb-2'>{project.description}</p>

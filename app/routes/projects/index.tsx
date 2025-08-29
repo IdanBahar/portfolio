@@ -17,7 +17,7 @@ const ProjectsPage = ({ loaderData }: Route.ComponentProps) => {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [currentPage, setCurrentPage] = useState(1)
 
-  const projectsPerPage = 2
+  const projectsPerPage = 10
   const { projects } = loaderData as { projects: Project[] }
 
   // Get unique categories
@@ -48,7 +48,7 @@ const ProjectsPage = ({ loaderData }: Route.ComponentProps) => {
       <div className='flex flex-wrap gap-2 mb-8 justify-center '>
         {categories.map((category) => (
           <button
-            className={`px-3 py-1 rounded text-sm cursor-pointer transition  ${category === selectedCategory ? 'bg-blue-600 text-white' : 'bg-gray-700 text-gray-200 hover:bg-blue-600'}`}
+            className={`px-3 py-1 rounded text-sm cursor-pointer transition  ${category === selectedCategory ? 'bg-green-500 text-white' : ' text-gray-200 hover:bg-green-600'}`}
             key={category}
             onClick={() => {
               setSelectedCategory(category)

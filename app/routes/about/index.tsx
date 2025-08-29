@@ -1,22 +1,15 @@
 import Skills from '~/components/Skills'
-import type { Route } from './+types/home'
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: 'Idan Bahar Dev | About' },
-    { name: 'description', content: 'Welcome to Idan Bahar Dev!' },
-  ]
-}
 const AboutPage = () => {
   return (
-    <div className='max-w-5xl mx-auto px-6 py-16 bg-gray-900'>
+    <div className='max-w-5xl mx-auto px-6 py-16 '>
       {/* INTRO */}
 
       <div className='flex flex-col md:flex-row items-center md:items-start gap-10 mb-12'>
         <img
           src='/images/IMG_1759.JPG'
           alt='profile'
-          className='w-40 h-40 rounded-full object-cover border-4 border-blue-400 shadow-mg'
+          className='w-40 h-40 rounded-full object-cover border-4 border-green-400 shadow-mg'
         />
         <div>
           <h1 className='text-3xl font-bold text-white mb-2'>

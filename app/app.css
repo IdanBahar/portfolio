@@ -1,17 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import 'tailwindcss';
+
+@plugin '@tailwindcss/typography';
 
 @theme {
   --font-sans:
-    'Montserrat', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Fira Mono', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-white;
+  background: linear-gradient(180deg, #2e2e2e 0%, #3a3a3a 100%);
+
   --font-sans:
-    'Montserrat', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Fira Mono', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;

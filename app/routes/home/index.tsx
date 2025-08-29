@@ -1,5 +1,5 @@
 import AboutPreview from '~/components/AboutPreview'
-import type { Route } from './+types/home'
+import type { Route } from './+types/index'
 import FeaturedProjects from '~/components/FeaturedProjects'
 import type { Project } from '~/types'
 export function meta({}: Route.MetaArgs) {

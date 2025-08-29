@@ -18,8 +18,8 @@ const Pagination: React.FC<PaginationProps> = ({
           onClick={() => onPageChange(idx + 1)}
           className={`px-3 py-1 cursor-pointer rounded ${
             currentPage === idx + 1
-              ? 'bg-blue-600 text-white'
-              : 'bg-gray-700 text-gray-200'
+              ? 'bg-green-500 text-white'
+              : 'text-gray-200'
           }`}
         >
           {idx + 1}

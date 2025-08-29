@@ -3,7 +3,7 @@ import type { Route } from './+types/home'
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: 'Idan Bahar Dev | Projects' },
+    { title: 'Idan Bahar Dev' },
     { name: 'description', content: 'Welcome to Idan Bahar Dev!' },
   ]
 }

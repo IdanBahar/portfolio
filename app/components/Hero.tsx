@@ -6,12 +6,15 @@ type HeroProps = {
 }
 
 const Hero: React.FC<HeroProps> = ({
-  name = 'Idan Bahar',
+  name = 'Idan',
   text = "I'm a passionate web developer with a focus on building modern web applications.",
 }) => {
   return (
-    <header className='text-center py-20 px-4 bg-gray-900 text-white transition-colors duration-300'>
-      <h2 className='text-4xl font-bold mb-4'>Hi, I'm {name} 👋🏻</h2>
+    <header className='text-center py-20 px-4  text-white transition-colors duration-300'>
+      <h2 className='text-4xl font-bold mb-4'>
+        Hi there<span className='text-green-400'>,</span> I'm{' '}
+        <span className='text-green-400'>{name}</span> 👋🏻
+      </h2>
       <p className='text-lg text-gray-400 max-w-2xl mx-auto mb-6'>
         {text}
         applications.
@@ -19,13 +22,13 @@ const Hero: React.FC<HeroProps> = ({
       <div className='flex justify-center gap-4'>
         <Link
           to='/projects'
-          className='bg-blue-500 hover:bg-blue-500 text-white  py-2 px-6 rounded transition-colors duration-300'
+          className='bg-green-500 text-white font-semibold py-2 px-6 rounded transition-colors duration-300 border border-transparent hover:border-white'
         >
           View Projects
         </Link>
         <Link
           to='/contact'
-          className='border border-blue-500 text-blue-400  py-2 px-6 rounded transition-colors duration-300 hover:text-white hover:bg-blue-500'
+          className='border border-white text-white  py-2 px-6 rounded transition-colors duration-300 hover:bg-green-500'
         >
           Contact Me
         </Link>
