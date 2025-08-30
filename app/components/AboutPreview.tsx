@@ -21,7 +21,7 @@ const AboutPreview = () => {
           experiences.
         </p>
         <Skills />
-        <div className='flex lg:justify-start md:justify-center sm:justify-center'>
+        <div className='flex lg:justify-start md:justify-start sm:justify-center'>
           <Link
             to='/about'
             className='inline-block text-green-400 hover:underline text-sm mt-5'

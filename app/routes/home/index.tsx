@@ -40,7 +40,7 @@ const HomePage = ({ loaderData }: Route.ComponentProps) => {
   return (
     <>
       <AboutPreview />
-      <Arrow textSize='5xl' arrow='↓' direction='down' />
+      <Arrow textSize='4xl' arrow='↓' direction='down' />
       <FeaturedProjects projects={projects} count={2} />
     </>
   )
