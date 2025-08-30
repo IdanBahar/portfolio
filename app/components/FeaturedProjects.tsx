@@ -6,7 +6,8 @@ type FeatureProjectProps = {
 }
 
 const FeaturedProjects = ({ projects, count = 2 }: FeatureProjectProps) => {
-  const featured = projects.filter((p) => !p.featured)
+  const featured = projects.filter((p) => p.featured)
+  console.log(featured)
 
   return (
     <section id='target-section' className='flex flex-col  mt-10 mb-10'>
