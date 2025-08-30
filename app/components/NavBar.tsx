@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router'
 import { FaTimes, FaBars } from 'react-icons/fa'
-import type { Route } from '../+types/root'
-import type { SiteContent, StrapiResponse } from '~/types'
 
-const NavBar = ({ loaderData }: Route.ComponentProps) => {
+const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const base =

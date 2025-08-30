@@ -7,7 +7,7 @@ const AboutPage = () => {
 
       <div className='flex flex-col md:flex-row items-center md:items-start gap-10 mb-12'>
         <img
-          src='/images/IMG_1759.JPG'
+          src='https://res.cloudinary.com/dmhwyrnly/image/upload/v1756553272/medium_IMG_1759_d633d10ad7.jpg'
           alt='profile'
           className='w-40 h-40 rounded-full object-cover border-4 border-green-400 shadow-mg'
         />
