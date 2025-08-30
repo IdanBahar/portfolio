@@ -28,7 +28,11 @@ const Arrow = ({
     <div className='flex justify-center'>
       <button
         type='button'
-        style={{ background: 'transparent', border: 'none', padding: 0 }}
+        style={{
+          background: 'transparent',
+          border: 'none',
+          padding: 0,
+        }}
         className='cursor-pointer'
         onClick={() => {
           const el = document.getElementById('target-section')

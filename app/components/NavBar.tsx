@@ -6,8 +6,7 @@ import Arrow from './Arrow'
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const base =
-    'transition hover:text-white hover:bg-gray-700 px-2 py-1 rounded-xl'
+  const base = 'transition text-white hover:bg-gray-700 px-2 py-1 rounded-xl'
   const active =
     'text-green-400 font-semibold border px-2 py-1 rounded-xl border-white transition'
 
@@ -17,10 +16,7 @@ const NavBar = () => {
       className=' border-b border-gray-700 shadow-md sticky top-0 z-50'
     >
       <div className='max-w-6xl mx-auto px-6 py-4 flex justify-between items-center'>
-        <NavLink
-          to='/'
-          className='flex items-center gap-2 text-lg font-bold text-blue-300'
-        >
+        <NavLink to='/' className='flex items-center gap-2 text-lg font-bold '>
           <img
             className='w-15 h-15 rounded-full object-cover border-green-400 border-2'
             src='https://res.cloudinary.com/dmhwyrnly/image/upload/v1756553272/medium_IMG_1759_d633d10ad7.jpg'
@@ -30,7 +26,7 @@ const NavBar = () => {
         </NavLink>
         {/* Desktop NavBar */}
         <div className='hidden md:flex items-center gap-6 self-end border-gray-700'>
-          <div className='space-x-4 text-sm text-gray-300'>
+          <div className='space-x-4 text-sm '>
             <div className='inline-flex justify-center items-end gap-5'>
               <Arrow
                 textSize='md'
@@ -41,7 +37,7 @@ const NavBar = () => {
               <a
                 href='/IDAN_BAHAR_FINAL.docx'
                 download
-                className='flex flex-row  '
+                className='flex flex-row text-white  '
               >
                 My Resume
               </a>
