@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router'
 import { FaTimes, FaBars } from 'react-icons/fa'
+import Arrow from './Arrow'
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -30,6 +31,22 @@ const NavBar = () => {
         {/* Desktop NavBar */}
         <div className='hidden md:flex items-center gap-6 self-end border-gray-700'>
           <div className='space-x-4 text-sm text-gray-300'>
+            <div className='inline-flex justify-center items-end gap-5'>
+              <Arrow
+                textSize='md'
+                arrow='→'
+                direction={'right'}
+                repeat={Infinity}
+              />
+              <a
+                href='/IDAN_BAHAR_FINAL.docx'
+                download
+                className='flex flex-row  '
+              >
+                My Resume
+              </a>
+            </div>
+
             <NavLink
               className={({ isActive }) => (isActive ? active : base)}
               to='/'
@@ -75,6 +92,21 @@ const NavBar = () => {
           }}
           className='md:hidden  border-t border-gray-700 px-6 py-4 space-y-2 space-x-4 text-center'
         >
+          <div className='inline-flex  items-end gap-5'>
+            <Arrow
+              textSize='md'
+              arrow='→'
+              direction={'right'}
+              repeat={Infinity}
+            />
+            <a
+              href='/IDAN_BAHAR_FINAL.docx'
+              download
+              className='flex flex-row  '
+            >
+              My Resume
+            </a>
+          </div>
           <NavLink
             onClick={() => setMenuOpen(false)}
             className={({ isActive }) => (isActive ? active : base)}
@@ -89,7 +121,6 @@ const NavBar = () => {
           >
             Projects
           </NavLink>
-
           <NavLink
             onClick={() => setMenuOpen(false)}
             className={({ isActive }) => (isActive ? active : base)}

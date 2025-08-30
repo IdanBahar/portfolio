@@ -1,5 +1,29 @@
 import { motion } from 'framer-motion'
-const Arrow = () => {
+
+const Arrow = ({
+  textSize = 'xl',
+  arrow = '↓',
+  direction = 'down',
+  duration = 1,
+  repeat = 4,
+}) => {
+  let animate
+  switch (direction) {
+    case 'down':
+      animate = { x: [0, 0, 0], y: [0, 9, 0] }
+      break
+    case 'up':
+      animate = { x: [0, 0, 0], y: [0, -9, 0] }
+      break
+    case 'left':
+      animate = { x: [0, -9, 0], y: [0, 0, 0] }
+      break
+    case 'right':
+      animate = { x: [0, 9, 0], y: [0, 0, 0] }
+      break
+    default:
+      animate = { x: [0, 0, 0], y: [0, 9, 0] }
+  }
   return (
     <div className='flex justify-center'>
       <button
@@ -14,16 +38,16 @@ const Arrow = () => {
         }}
       >
         <motion.span
-          className='inline-block text-green-400 text-5xl mx-auto mt-20'
-          animate={{ x: [0, 0, 0], y: [0, 9, 0] }}
+          className={`inline-block text-green-400 text-${textSize} mx-auto `}
+          animate={animate}
           transition={{
-            duration: 0.8,
-            repeat: Infinity,
+            duration: duration,
+            repeat: repeat,
             ease: 'easeInOut',
           }}
           aria-hidden='true'
         >
-          ↓
+          {arrow}
         </motion.span>
       </button>
     </div>

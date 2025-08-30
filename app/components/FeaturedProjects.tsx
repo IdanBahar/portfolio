@@ -5,8 +5,8 @@ type FeatureProjectProps = {
   count: number
 }
 
-const FeaturedProjects = ({ projects, count = 4 }: FeatureProjectProps) => {
-  const featured = projects.filter((p) => p.featured)
+const FeaturedProjects = ({ projects, count = 2 }: FeatureProjectProps) => {
+  const featured = projects.filter((p) => !p.featured)
 
   return (
     <section id='target-section' className='flex flex-col  mt-10 mb-10'>

@@ -4,7 +4,7 @@ import Skills from './Skills'
 
 const AboutPreview = () => {
   return (
-    <section className='mt-12 lg:p-10 flex flex-col items-center gap-6 md:flex-row'>
+    <section className='mt-12 mb-20 lg:p-10 flex flex-col items-center gap-6 md:flex-row'>
       <img
         src='https://res.cloudinary.com/dmhwyrnly/image/upload/v1756553272/medium_IMG_1759_d633d10ad7.jpg'
         alt='profile'

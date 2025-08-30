@@ -1,3 +1,4 @@
+import Arrow from '~/components/Arrow'
 import Skills from '~/components/Skills'
 
 const AboutPage = () => {
