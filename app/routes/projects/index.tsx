@@ -4,12 +4,22 @@ import { useState } from 'react'
 import ProjectCard from '~/components/ProjectCard'
 import Pagination from '~/components/Pagination'
 import { AnimatePresence, motion } from 'framer-motion'
+import type { StrapiProject } from '~/types'
 export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ projects: Project[] }> {
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/projects`)
-  const data = await res.json()
-  return { projects: data }
+  const res = await fetch(`${import.meta.env.VITE_API_URL}/projects?populate=*`)
+  const json = await res.json()
+  const projects = json.data.map((item: StrapiProject) => ({
+    id: item.id,
+    documentId: item.documentId,
+    title: item.title,
+    category: item.category,
+    description: item.description,
+    image: item.image?.url ? `${item.image.url}` : 'images/no-image.png',
+    date: item.date,
+  }))
+  return { projects }
 }
 
 const ProjectsPage = ({ loaderData }: Route.ComponentProps) => {

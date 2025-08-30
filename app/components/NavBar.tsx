@@ -1,11 +1,16 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router'
-import { FaLaptopCode, FaTimes, FaBars } from 'react-icons/fa'
-const NavBar = () => {
+import { FaTimes, FaBars } from 'react-icons/fa'
+import type { Route } from '../+types/root'
+import type { SiteContent, StrapiResponse } from '~/types'
+
+const NavBar = ({ loaderData }: Route.ComponentProps) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const base = 'transition hover:text-green-400'
-  const active = 'text-green-400 font-semibold'
+  const base =
+    'transition hover:text-white hover:bg-gray-700 px-2 py-1 rounded-xl'
+  const active =
+    'text-green-400 font-semibold border px-2 py-1 rounded-xl border-white transition'
 
   return (
     <nav
@@ -19,13 +24,13 @@ const NavBar = () => {
         >
           <img
             className='w-15 h-15 rounded-full object-cover border-green-400 border-2'
-            src='images/IMG_1759.JPG'
+            src='https://res.cloudinary.com/dmhwyrnly/image/upload/v1756553272/medium_IMG_1759_d633d10ad7.jpg'
             alt=''
           />
-          <span className='text-green-400'>Idan Bahar Dev</span>
+          <span className='text-white'>Idan Bahar Dev</span>
         </NavLink>
         {/* Desktop NavBar */}
-        <div className='hidden md:flex items-center gap-6 self-end'>
+        <div className='hidden md:flex items-center gap-6 self-end border-gray-700'>
           <div className='space-x-4 text-sm text-gray-300'>
             <NavLink
               className={({ isActive }) => (isActive ? active : base)}
@@ -39,12 +44,7 @@ const NavBar = () => {
             >
               Projects
             </NavLink>
-            <NavLink
-              className={({ isActive }) => (isActive ? active : base)}
-              to='/blog'
-            >
-              Blog
-            </NavLink>
+
             <NavLink
               className={({ isActive }) => (isActive ? active : base)}
               to='/about'
@@ -91,13 +91,7 @@ const NavBar = () => {
           >
             Projects
           </NavLink>
-          <NavLink
-            onClick={() => setMenuOpen(false)}
-            className={({ isActive }) => (isActive ? active : base)}
-            to='/blog'
-          >
-            Blog
-          </NavLink>
+
           <NavLink
             onClick={() => setMenuOpen(false)}
             className={({ isActive }) => (isActive ? active : base)}

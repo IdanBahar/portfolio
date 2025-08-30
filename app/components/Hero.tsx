@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import { motion } from 'framer-motion'
 
 type HeroProps = {
   name?: string
@@ -13,7 +14,16 @@ const Hero: React.FC<HeroProps> = ({
     <header className='text-center py-20 px-4  text-white transition-colors duration-300'>
       <h2 className='text-4xl font-bold mb-4'>
         Hi there<span className='text-green-400'>,</span> I'm{' '}
-        <span className='text-green-400'>{name}</span> 👋🏻
+        <span className='text-green-400'>{name}</span>{' '}
+        <motion.span
+          style={{ display: 'inline-block' }}
+          animate={{ rotate: [0, 20, -10, 20, 0] }}
+          transition={{ duration: 0.9, repeat: 3, ease: 'easeInOut' }}
+          aria-label='waving hand'
+          role='img'
+        >
+          👋🏻
+        </motion.span>
       </h2>
       <p className='text-lg text-gray-400 max-w-2xl mx-auto mb-6'>
         {text}

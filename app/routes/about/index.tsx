@@ -26,9 +26,11 @@ const AboutPage = () => {
       <div className='mb-12'>
         <h2 className='text-2xl font-semibold text-white mb-4'>My Mission</h2>
         <p className='text-gray-300 leading-relaxed'>
-          Frontend Developer with a strong background in banking technology,
-          skilled in React and Node.js. Combines analytical precision from the
-          financial world with creativity and innovation in web development.
+          To craft impactful, scalable, and user-centric web{' '}
+          <span className='text-green-400'>applications</span> that bridge
+          modern technology with real-world solutions. I aim to continuously
+          evolve, learn, and innovate, bringing clean code, creative
+          problem-solving, and a growth-driven mindset to every project I build.
         </p>
       </div>
       {/* Tech Stack */}
