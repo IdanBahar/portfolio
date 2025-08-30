@@ -37,7 +37,10 @@ const NavBar = () => {
               <a
                 href='/IDAN_BAHAR_FINAL.docx'
                 download
-                className='flex flex-row text-green-400  '
+                className='flex flex-row text-green-400 
+                font-bold
+                [-webkit-text-fill-color:white] [color-scheme:light_dark]
+                '
               >
                 My Resume
               </a>
@@ -98,7 +101,7 @@ const NavBar = () => {
             <a
               href='/IDAN_BAHAR_FINAL.docx'
               download
-              className='flex flex-row  '
+              className='flex flex-row [-webkit-text-fill-color:white] [color-scheme:light_dark] text-green-400 font-bold'
             >
               My Resume
             </a>
