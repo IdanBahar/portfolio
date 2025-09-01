@@ -8,6 +8,7 @@ export type Project = {
   date: string
   category: string
   featured: boolean
+  projectlink: string
 }
 export type PostMeta = {
   id: string
@@ -47,6 +48,7 @@ export type StrapiProject = {
   date: string
   category: string
   featured: boolean
+  projectlink: string
 }
 
 export type SiteContent = {

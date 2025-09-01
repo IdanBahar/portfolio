@@ -12,6 +12,7 @@ export async function loader({ request, params }: Route.LoaderArgs) {
   const json: StrapiResponse<StrapiProject> = await res.json()
 
   const item = json.data[0]
+  console.log(item)
 
   const project: Project = {
     id: item.id,
@@ -23,13 +24,14 @@ export async function loader({ request, params }: Route.LoaderArgs) {
     date: item.date,
     category: item.category,
     featured: item.featured,
+    projectlink: item.projectlink,
   }
 
   return { project }
 }
-
 const ProjectDetailsPage = ({ loaderData }: Route.ComponentProps) => {
   const { project } = loaderData
+  console.log(project)
 
   return (
     <>
@@ -61,6 +63,13 @@ const ProjectDetailsPage = ({ loaderData }: Route.ComponentProps) => {
             className='inline-block text-white bg-green-600 hover:bg-green-700 px-6 py-2 rounded transition'
           >
             View Live Project
+          </a>
+          <a
+            href={project.url}
+            target='_blank'
+            className='inline-block text-white bg-green-600 hover:bg-green-700 px-6 py-2 rounded transition'
+          >
+            View Github Repository
           </a>
         </div>
       </div>

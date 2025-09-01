@@ -29,6 +29,7 @@ export async function loader({
     date: item.date,
     category: item.category,
     featured: item.featured,
+    projectlink: item.projectlink,
   }))
 
   return { projects }
