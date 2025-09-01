@@ -26,6 +26,7 @@ export async function loader({ request, params }: Route.LoaderArgs) {
     featured: item.featured,
     projectlink: item.projectlink,
   }
+  console.log(project)
 
   return { project }
 }
